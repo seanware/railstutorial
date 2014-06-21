@@ -7,3 +7,10 @@
     <li><%= single_participant.name %> is bringing <%= single_participant.guests %> guests<br /></li>
 <% end %>
 </ul>
+
+<h2>Add Participant</h2>
+
+<%= form_for [@event, @event.participants.new] do |form| %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+<% end %>
