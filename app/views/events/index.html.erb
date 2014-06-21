@@ -5,5 +5,6 @@
   <%= single_event.description %><br />
   <%= single_event.location %>
   <%= link_to "Edit", edit_event_path(single_event) %>
+  <%= link_to "Destroy", single_event, method: :delete, data: {confirm: "Are you sure?"} %>
   <br />
 <% end %>
