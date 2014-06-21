@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
 
   resources :events do
-    resources :participants
+    resources :participants do
+      member do
+        post :add_guest
+      end
+    end
   end
 
 root :to => 'events#index'

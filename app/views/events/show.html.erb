@@ -4,7 +4,9 @@
 <h3>Participant</h3>
 <ul>
   <% @event.participants.each do |single_participant| %>
-    <li><%= single_participant.name %> is bringing <%= single_participant.guests %> guests<br /></li>
+    <li><%= single_participant.name %> is bringing <%= single_participant.guests %> guests<br /><br />
+      Bringing a guest? <%= button_to "Guest +1", add_guest_event_participant_path(@event.id, single_participant) %>
+  </li>
 <% end %>
 </ul>
 
