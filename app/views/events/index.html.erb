@@ -1,7 +1,7 @@
 <h2>Events</h2>
 
 <% @events.each do |single_event| %>
-  <%= single_event.name %> -
+  <%= link_to single_event.name, event_path(single_event) %> -
   <%= single_event.description %><br />
   <%= single_event.location %>
   <%= link_to "Edit", edit_event_path(single_event) %>
