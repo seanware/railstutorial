@@ -7,6 +7,7 @@
 <table class="table table-striped">
   <thead>
     <th>Event</th>
+    <th>Total Participants</th>
     <th>Actions</td>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
           <%= link_to event.name, event_path(event) %> - <%= event.description %><br />
           <%= event.location %>
         </td>
+        <td><%= event.total_participants %></td>
         <td>
           <%= link_to "Edit", edit_event_path(event) %>
           <%= link_to "Destroy", event, method: :delete, data: {confirm: 'Are you sure?'} %>
